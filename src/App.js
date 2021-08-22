@@ -37,14 +37,14 @@ function App() {
     <div className="app">
       <main>
         <h1>Conversor USD - ARS</h1>
-        <h2>Cotización del dólar blue: ${rate === 0 ? '' : rate}</h2>
+        <h2 className="subtitle">Cotización del dólar blue: ${rate === 0 ? '' : rate}</h2>
         <div className="rate-wrapper">
           <RateInput
             onChange={onARSChange}
             value={ARSInput}
             currencyText="ARS"
           />
-          <span>=</span>
+          <span className="equal-sign">=</span>
           <RateInput
             onChange={onUSDChange}
             value={USDInput}

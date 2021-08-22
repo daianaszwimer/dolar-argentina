@@ -9,8 +9,18 @@
   width: 100%;
 }
 
+.subtitle {
+  margin: 0.75rem 0;
+}
+
 .rate-wrapper {
   display: flex;
+  font-size: 1.25rem;
+}
+
+.equal-sign {
+  margin: 1rem;
+  color: var(--main-text-color);
 }
 
 h1,
@@ -25,4 +35,11 @@ body,
 #root {
   height: 100%;
   width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #320e3b;
+    --main-text-color: #8e7dbe;
+  }
 }

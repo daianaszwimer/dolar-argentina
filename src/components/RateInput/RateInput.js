@@ -6,6 +6,7 @@ const RateInput = ({ onChange, value, currencyText }) => (
       onChange={onChange}
       type="number"
       min="0"
+      className="rate-input"
     />
     <span>{currencyText}</span>
   </div>
