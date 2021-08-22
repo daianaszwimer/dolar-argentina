@@ -2,9 +2,10 @@ import "./RateInput.css"
 const RateInput = ({ onChange, value, currencyText }) => (
   <div className="rate-input-wrapper">
     <input
-      value={value}
+      value={(Math.round(value * 100) / 100).toFixed(2)}
       onChange={onChange}
       type="number"
+      min="0"
     />
     <span>{currencyText}</span>
   </div>
