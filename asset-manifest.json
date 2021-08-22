@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dolar-argentina/static/css/main.67bddcf2.chunk.css",
+    "main.js": "/dolar-argentina/static/js/main.8278d5d2.chunk.js",
+    "main.js.map": "/dolar-argentina/static/js/main.8278d5d2.chunk.js.map",
+    "runtime-main.js": "/dolar-argentina/static/js/runtime-main.21458a4c.js",
+    "runtime-main.js.map": "/dolar-argentina/static/js/runtime-main.21458a4c.js.map",
+    "static/js/2.49411693.chunk.js": "/dolar-argentina/static/js/2.49411693.chunk.js",
+    "static/js/2.49411693.chunk.js.map": "/dolar-argentina/static/js/2.49411693.chunk.js.map",
+    "static/js/3.d241bce1.chunk.js": "/dolar-argentina/static/js/3.d241bce1.chunk.js",
+    "static/js/3.d241bce1.chunk.js.map": "/dolar-argentina/static/js/3.d241bce1.chunk.js.map",
+    "index.html": "/dolar-argentina/index.html",
+    "static/css/main.67bddcf2.chunk.css.map": "/dolar-argentina/static/css/main.67bddcf2.chunk.css.map",
+    "static/js/2.49411693.chunk.js.LICENSE.txt": "/dolar-argentina/static/js/2.49411693.chunk.js.LICENSE.txt",
+    "static/media/github.a517db18.svg": "/dolar-argentina/static/media/github.a517db18.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21458a4c.js",
+    "static/js/2.49411693.chunk.js",
+    "static/css/main.67bddcf2.chunk.css",
+    "static/js/main.8278d5d2.chunk.js"
+  ]
+}
