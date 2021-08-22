@@ -1,6 +1,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import RateInput from "./components/RateInput/RateInput";
+import {ReactComponent as GitHubIcon} from "./github.svg";
 
 const LOCAL_STORAGE_NAME = 'rate-usd'
 const ONE_HOUR_MILLISECONDS = 3600000
@@ -45,6 +46,16 @@ function App() {
   }
   return (
     <div className="app">
+      <header>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-link"
+          href="https://github.com/daianaszwimer/dolar-argentina"
+        >
+          <GitHubIcon alt="GitHub Icon"/>
+        </a>
+      </header>
       <main>
         <h1>Conversor USD - ARS</h1>
         <h2 className="subtitle">Cotización del dólar blue: ${rate === 0 ? '' : rate}</h2>

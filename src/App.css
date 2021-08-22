@@ -18,8 +18,23 @@
   font-size: 1.25rem;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .equal-sign {
   margin: 1rem;
+  color: var(--main-text-color);
+}
+
+.github-link {
+  position: absolute;
+  right: 10px;
+  top: 10px;
   color: var(--main-text-color);
 }
 
