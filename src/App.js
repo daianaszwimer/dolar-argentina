@@ -63,13 +63,13 @@ function App() {
           <RateInput
             onChange={onARSChange}
             value={ARSInput}
-            currencyText="ARS"
+            currencyText="USD"
           />
           <span className="equal-sign">=</span>
           <RateInput
             onChange={onUSDChange}
             value={USDInput}
-            currencyText="USD"
+            currencyText="ARS"
           />
         </div>
       </main>
