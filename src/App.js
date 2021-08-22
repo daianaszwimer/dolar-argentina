@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import RateInput from "./components/RateInput/RateInput";
 
 const LOCAL_STORAGE_NAME = 'rate-usd'
-
+const ONE_HOUR_MILLISECONDS = 3600000
 function App() {
   const [rate, setRate] = useState(0);
   const [USDInput, setUSDInput] = useState(0);
@@ -11,16 +11,26 @@ function App() {
   useEffect(() => {
     const localStorageRate = localStorage.getItem(LOCAL_STORAGE_NAME)
     if (localStorageRate) {
-      const value = parseInt(localStorageRate);
-      setRate(value);
-      return;
+      const value = JSON.parse(localStorageRate);
+      const now = new Date()
+      if (now.getTime() > value.expiry) {
+        localStorage.removeItem(LOCAL_STORAGE_NAME)
+      } else {
+        setRate(value.value);
+        return;
+      }
     }
     fetch('https://mercados.ambito.com//dolar/informal/variacion')
       .then(response => response.json())
       .then(data => {
         const value = parseInt(data.venta);
         setRate(value);
-        localStorage.setItem(LOCAL_STORAGE_NAME, data.venta); // todo: use expiration date
+        const now = new Date()
+        const item = {
+          value: value,
+          expiry: now.getTime() + ONE_HOUR_MILLISECONDS,
+        }
+        localStorage.setItem(LOCAL_STORAGE_NAME, JSON.stringify(item))
       });
   }, [])
   const onARSChange = (event) => {
